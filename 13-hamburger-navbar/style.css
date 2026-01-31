@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #80a3a5;
+}
+
+header {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* ─── Nav Links ─── */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+}
+
+/* ─── Hamburger Button ─── */
+.hamburger {
+  font-size: 2.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  line-height: 1;
+}
+
+/* ─── Close Button ─── */
+.cross-sign {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    background-color: rgba(150, 133, 133, 0.32);
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    padding: 20px;
+    display: none;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+  .hamburger-open{
+    display: none;
+  }
+
+  .cross-sign {
+    display: block;
+    align-self: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
