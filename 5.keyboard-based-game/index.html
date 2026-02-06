@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Game</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="game-container">
+        <!-- Game Header -->
+        <div class="game-header">
+            <h1>🎮 Keyboard Challenge</h1>
+            <p class="instructions">Press the key shown on the screen as fast as you can!</p>
+        </div>
+
+        <!-- Score Board -->
+        <div class="score-board">
+            <div class="score-item">
+                <span class="label">Score:</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="score-item">
+                <span class="label">High Score:</span>
+                <span class="value" id="highScore">0</span>
+            </div>
+            <div class="score-item">
+                <span class="label">Time:</span>
+                <span class="value" id="timer">30</span>
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <div class="game-area">
+            <!-- Target Key Display -->
+            <div class="target-key-container">
+                <p class="target-label">Press This Key:</p>
+                <div class="target-key" id="targetKey">A</div>
+            </div>
+
+            <!-- Feedback Message -->
+            <div class="feedback" id="feedback"></div>
+
+            <!-- Start/Restart Button -->
+            <button class="game-btn" id="startBtn">Start Game</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div class="game-over" id="gameOver">
+            <div class="game-over-content">
+                <h2>🎉 Game Over!</h2>
+                <p class="final-score">Your Score: <span id="finalScore">0</span></p>
+                <button class="game-btn" id="restartBtn">Play Again</button>
+            </div>
+        </div>
+
+        <!-- Stats Display (Optional) -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Correct:</span>
+                <span class="stat-value" id="correctCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Wrong:</span>
+                <span class="stat-value" id="wrongCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Accuracy:</span>
+                <span class="stat-value" id="accuracy">100%</span>
+            </div>
+        </div>
+
+        <!-- Virtual Keyboard Display (Optional - for visual feedback) -->
+        <div class="keyboard-display">
+            <div class="keyboard-row">
+                <div class="key" data-key="Q">Q</div>
+                <div class="key" data-key="W">W</div>
+                <div class="key" data-key="E">E</div>
+                <div class="key" data-key="R">R</div>
+                <div class="key" data-key="T">T</div>
+                <div class="key" data-key="Y">Y</div>
+                <div class="key" data-key="U">U</div>
+                <div class="key" data-key="I">I</div>
+                <div class="key" data-key="O">O</div>
+                <div class="key" data-key="P">P</div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key" data-key="A">A</div>
+                <div class="key" data-key="S">S</div>
+                <div class="key" data-key="D">D</div>
+                <div class="key" data-key="F">F</div>
+                <div class="key" data-key="G">G</div>
+                <div class="key" data-key="H">H</div>
+                <div class="key" data-key="J">J</div>
+                <div class="key" data-key="K">K</div>
+                <div class="key" data-key="L">L</div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key" data-key="Z">Z</div>
+                <div class="key" data-key="X">X</div>
+                <div class="key" data-key="C">C</div>
+                <div class="key" data-key="V">V</div>
+                <div class="key" data-key="B">B</div>
+                <div class="key" data-key="N">N</div>
+                <div class="key" data-key="M">M</div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
